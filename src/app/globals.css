@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #0f1729;
+    --color-amber: #f59f0a;
+    --color-cream: #f8f7f4;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-navy);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border-hairline border-navy/10 rounded-xl p-6 shadow-sm;
+  }
+
+  .btn-amber {
+    @apply inline-flex items-center justify-center gap-2 bg-amber text-navy font-medium px-4 py-2 rounded-md hover:bg-amber/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white border-hairline border-navy/15 text-navy font-medium px-4 py-2 rounded-md hover:bg-navy/5 transition-colors;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 bg-red-600 text-white font-medium px-3 py-1.5 rounded-md text-sm hover:bg-red-700 transition-colors;
+  }
+
+  .input {
+    @apply w-full bg-white border-hairline border-navy/15 rounded-md px-3 py-2 text-navy placeholder:text-navy/40 focus:outline-none focus:ring-2 focus:ring-amber/40 focus:border-amber;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-navy/80 mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center font-mono text-xs px-2 py-1 rounded;
+  }
+}
